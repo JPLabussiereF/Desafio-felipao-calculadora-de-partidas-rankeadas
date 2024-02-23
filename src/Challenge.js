@@ -1,15 +1,42 @@
-// Crie uma função que recebe como parâmetro a quantidade de vitórias e derrotas de um jogador,
-// depois disso retorne o resultado para uma variável, o saldo de Rankeadas deve ser feito através do calculo (vitórias - derrotas)
+let resultado = VicAndDef(105, 37)
 
-// Se vitórias for menor do que 10 = Ferro
-// Se vitórias for entre 11 e 20 = Bronze
-// Se vitórias for entre 21 e 50 = Prata
-// Se vitórias for entre 51 e 80 = Ouro
-// Se vitórias for entre 81 e 90 = Diamante
-// Se vitórias for entre 91 e 100= Lendário
-// Se vitórias for maior ou igual a 101 = Imortal
+    console.log(`O Herói tem um saldo de vitorias de "${resultado}", e o mesmo está no  rank "${ rank}"`)
 
-// ## Saída
+function VicAndDef(victories, defeats){
 
-// Ao final deve se exibir uma mensagem:
-// "O Herói tem de saldo de **{saldoVitorias}** está no nível de **{nivel}**"
+    let saldoVic = victories - defeats;
+
+        switch(true){
+
+            case victories < 10:
+                rank = "Ferro"
+            break;
+
+            case victories <= 20:
+                rank = "Bronze"
+            break;
+        
+            case victories <= 50:
+                rank = "Prata"
+            break;
+        
+            case victories <= 80:
+                rank = "Ouro"
+            break;
+        
+            case victories <= 90:
+                rank = "Diamante"
+            break;
+        
+            case victories <= 100:
+                rank = "Lendário"
+            break;
+        
+            default:
+                rank = "Imortal"
+            break;
+    }
+
+    return saldoVic
+
+}
