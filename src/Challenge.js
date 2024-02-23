@@ -1,6 +1,6 @@
 let resultado = VicAndDef(105, 37)
 
-    console.log(`O Herói tem um saldo de vitorias de "${resultado}", e o mesmo está no  rank "${ rank}"`)
+    console.log(`O Herói tem um saldo de vitorias de "${resultado}", e o mesmo está no rank "${rank}!"`)
 
 function VicAndDef(victories, defeats){
 
@@ -38,5 +38,5 @@ function VicAndDef(victories, defeats){
     }
 
     return saldoVic
-
+ 
 }
